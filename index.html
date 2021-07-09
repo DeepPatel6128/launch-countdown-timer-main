@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Frontend Mentor | Launch countdown timer</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+    <div class="heading">
+      <h1 class="head"> We're launching soon</h1>
+    </div>
+
+    <div class="timer-container">
+
+      <!-- Days -->
+      <div class="days timer">
+        <div class="stable-card">
+          <span class="day top-number">14</span>
+        </div>
+        <div class="top day-update">
+          <span class="day top-number">14</span>
+        </div>
+        <div class="bottom">
+          <span class="day bottom-number">14</span>
+        </div>
+        <div class="title">days</div>
+      </div>
+
+      <!-- Hours -->
+      <div class="hours timer">
+        <div class="stable-card">
+          <span class="hour top-number">23</span>
+        </div>
+        <div class="top hour-update">
+          <span class="hour top-number">23</span>
+        </div>
+        <div class="bottom">
+          <span class="hour bottom-number">23</span>
+        </div>
+        <div class="title">Hours</div>
+      </div>
+
+      <!-- Minutes -->
+      <div class="minutes timer">
+        <div class="stable-card">
+          <span class="minute top-number top-minute">50</span>
+        </div>
+        <div class="top minute-update">
+          <span class="minute top-number updated-minute">50</span>
+        </div>
+        <div class="bottom change-minute">
+          <span class="minute bottom-number bottom-minute">50</span>
+        </div>
+        <div class="title">minutes</div>
+      </div>
+
+      <!-- Seconds -->
+      <div class="seconds timer">
+        <div class="stable-card">
+          <span class="second top-second top-number">51</span>
+        </div>
+        <div class="top second-update">
+          <span class="second updated-second top-number">51</span>
+        </div>
+        <div class="bottom">
+          <span class="second bottom-second bottom-number">51</span>
+        </div>
+        <div class="title">seconds</div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="images">
+      <img src="./images/icon-facebook.svg" alt="">
+      <img src="./images/icon-pinterest.svg" alt="">
+      <img src="./images/icon-instagram.svg" alt="">
+    </div>
+    </footer>
+  <!-- We're launching soon
+
+  Days
+  Hours
+  Minutes
+  Seconds
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>

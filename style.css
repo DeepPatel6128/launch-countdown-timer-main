@@ -1,0 +1,192 @@
+:root{
+    --top-color:  #2c2c44;
+    --bottom-color:hsl(236, 21%, 26%);
+    --number-color: hsl(345, 95%, 68%);
+    --background-color:hsl(234, 17%, 12%);
+}
+*,*::after,*::before{
+    font-family: 'Red Hat Text';
+    box-sizing: border-box;
+}
+body{
+    box-sizing: inherit;
+    margin: 0;
+    background-color: var(--background-color);
+    background-image: url(./images/bg-stars.svg);
+    background-size: cover;
+    background-position: center;
+}
+.head{
+    position:absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 12%;
+    margin: 0;
+    color: whitesmoke;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.1rem;
+    letter-spacing: 5px;
+}
+.timer-container{
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    gap: 35px;
+    min-width:50%;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    perspective: 1000px;
+}
+.stable-card{
+    position:absolute;
+    width: 210px;
+    height: 100px;
+    background-color: var(--top-color);
+    border-radius: 10px 10px 0px 0px;
+    overflow: hidden;
+    transform-origin:bottom;
+}
+.stable-card::before{
+    content:'';
+    width: 0.7rem;
+    height: 0.7rem;
+    background-color: #1e1e28;
+    position: absolute;
+    bottom: 0;
+    border-radius: 0% 100% 0% 0%;
+}
+.stable-card::after{
+    content:'';
+    width: 0.7rem;
+    height: 0.7rem;
+    background-color: #1e1e28;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 100% 0% 0% 0%;
+}
+
+.top{
+    position: relative;
+    width: 210px;
+    height: 100px;
+    background-color: var(--top-color);
+    border-radius: 10px 10px 0px 0px;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transform-origin:bottom;
+    backface-visibility:none;
+}
+.animate{
+    animation: topToBottom 1s infinite normal;
+}
+.animate-once{
+    animation: topToBottom 1s forwards normal;
+}
+@keyframes topToBottom{
+    /* from{transform:rotateX(0deg)}
+    to{transform: rotateX(-180deg);} */
+    from{transform: rotate3d(0, 0, 0, 0deg);}
+    to{transform: rotate3d(1, 0, 0, -180deg);}
+}
+.top::before{
+    content:'';
+    width: 0.7rem;
+    height: 0.7rem;
+    background-color: #1e1e28;
+    position: absolute;
+    bottom: 0;
+    border-radius: 0% 100% 0% 0%;
+}
+.top::after{
+    content:'';
+    width: 0.7rem;
+    height: 0.7rem;
+    background-color: #1e1e28;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 100% 0% 0% 0%;
+}
+.top-number{
+    position: absolute;
+    font-size: 7rem;
+    color: #d64f70;
+    font-weight: 700;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%,-50%);
+}
+.bottom{
+    position: relative;
+    width: 210px;
+    height: 100px;
+    background-color: var(--bottom-color);
+    border-radius: 0px 0px 10px 10px;
+    overflow: hidden;
+    box-shadow: 0px 7px 0px #131111;
+}
+.bottom::before{
+    content:'';
+    width: 0.7rem;
+    height: 0.7rem;
+    background-color: #1e1e28;
+    position: absolute;
+    top: 0;
+    border-radius: 0% 0% 100% 0%;
+}
+.bottom::after{
+    content:'';
+    width: 0.7rem;
+    height: 0.7rem;
+    background-color: #1e1e28;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 0% 0% 0% 100%;
+}
+.bottom-number{
+    position: absolute;
+    font-size: 7rem;
+    color:  hsl(345, 95%, 68%);
+    font-weight: 700;
+    left:50%;
+    top: 0%;
+    transform: translate(-50%,-50%);
+}
+.title{
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    color: hsl(237, 18%, 59%);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+footer{
+    width: 100%;
+    height: 25vh;
+    position: absolute;
+    bottom: 0;
+    background: url(./images/pattern-hills.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y:top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer img{
+    margin: 0 1.2rem;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+footer img:hover{
+    transform: scale(1.4);
+}
